@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clase 3 JavaScript</title>
+</head>
+<body>
+    <h1>Arreglos</h1>
+    <p>Un conjunto o lista de valores</p>
+
+    <ul>
+        <li>Son una lista de datos mixto(booleanos, numeros, string)</li>
+        
+    </ul>
+
+    <h1>Metodos sobre los arreglos</h1>
+    <h3>Length</h3>
+    <p>Me devuelve el tamaño del arreglo</p>
+    <h3>Push( "un valor" )</h3>
+    <p>Agrega un valor al final del array emulando una pila</p>
+    <h3>pop()</h3>
+    <p>Saca el ultimo valor de un array y me lo devuelve. Seria la operacion contraria a push("un valor")</p>
+    <h3>Shift()</h3>
+    <p>Me saca el primer elemento del array y me lo devuelve.</p>
+    <h3>unshift("un valor")</h3>
+    <p>Me agrega un elemento adelante del array</p>
+    <h3>splice("un numero")</h3>
+    <p>Me borra los elementos del array a partir del numero ingresado +1</p>
+    <h3>splice("un numero","otro numero")</h3>
+    <p>Me borra los elementos del array a partir del numero ingresado +1, hasta borrar la cantidad de elementos igual al segundo argumento</p>
+    <h3>splice("un numero","otro numero", "nuevos elementos")</h3>
+    <p>Me borra los elementos del array a partir del numero ingresado +1,
+     hasta borrar la cantidad de elementos igual al segundo argumento
+     e inserta elementos en el tercer parametro </p>
+
+
+    <script>
+    /*ARREGLOS*/
+    
+    //var arreglo = [];
+    //var arregloDeNumeros = [12,23,56];
+    //var arregloDeString= ["Hola", "Chau","No","Si"];
+    //var arregloMixto = ["hola",23,true];
+
+    //alert(arregloMixto);
+    //alert(arregloMixto[1]);
+    /*
+
+        var array = ['a','b','c','d'];
+
+        array.push('e');
+
+        array.push(prompt('Ingrese un valor para el arreglo'));
+        
+        alert(array);
+    
+    */
+
+
+    var arreglo = [1,2,3,4];
+    /**
+        Asi reemplazo un valor en el array
+    */
+    arreglo[2]="hola";
+    alert(arreglo);
+    /** 
+    Asi aplasto al array (la variable deja de ser un array)
+    */
+   //arreglo = 'hola';
+    //alert(arreglo);
+    
+    
+    for(var i= 0 ; i < arreglo.length ; i++)
+    {
+        if(arreglo[i] == "hola")
+        {
+            arreglo[i] = 3;
+            break;
+        }
+    }
+    alert(arreglo);
+
+
+
+
+    </script>
+</body>
+</html>

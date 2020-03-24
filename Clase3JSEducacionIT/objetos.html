@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <table id="tabla"></table>
+    <script>    
+    /*
+    la diferencia entre array y objeto es que el primero se 
+    declara con corchetes y el segundo se declara con llaves.
+    
+    var objeto= {nombre:'matias', apellido:'rapaport',telefono: 42241408 };
+    */
+   // alert(objeto['nombre']);
+
+    //alert(objeto.nombre);
+
+    //alert(objeto);
+    /*
+    objeto.nombre = 'ivan';
+    
+    var baseDeDatos = [ {nombre: 'matias'} , {nombre:'ezequiel'} ];
+
+    alert( baseDeDatos[0].nombre );
+
+    */
+    //Esto es lo que me enviaria el backend. "JSON"
+    var empleados= [ {nombre: 'Ana' , apellido:'Garcia' , edad: 40},
+                     {nombre:'maria', apellido: 'zarate', edad:34 },
+                     {nombre: 'juan', apellido: 'pedro', edad: 40 } ];
+    /*
+    for(var i = 0 ; i < empleados.length ; i++)
+    {
+        alert('Nombre: ' + empleados[i].nombre + '. Apellido: ' + empleados[i].apellido + '. Edad: '+ empleados[i].edad);
+    }
+    */
+    /*
+    for(var i = 0 ; i < empleados.length ; i++)
+    {
+        document.writeln('Nombre: ' + empleados[i].nombre + '. Apellido: ' + empleados[i].apellido + '. Edad: '+ empleados[i].edad);
+        document.writeln('<br>');
+    }
+    */
+    var acum='';
+    for(var i = 0 ; i < empleados.length ; i++)
+    {
+        acum = acum + '<tr>'+
+                        '<td>'+' Nombre: ' + empleados[i].nombre + '</td>'+
+                        '<td>'+' Apellido: ' + empleados[i].apellido + '</td>'+
+                        '<td>'+' Edad: '+ empleados[i].edad+'</td>' + 
+                    '</tr>';
+    }
+
+    document.getElementById('tabla').innerHTML = acum;
+   
+    </script>
+
+</body>
+
+</html>
